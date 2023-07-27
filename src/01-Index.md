@@ -1,3 +1,8 @@
+---
+slug: /
+title: Index
+---
+
 # radio-aktywne
 
 This is a place for general documentation.
