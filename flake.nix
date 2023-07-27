@@ -89,6 +89,15 @@
             '';
           };
 
+          build = pkgs.mkShell {
+            name = "build";
+
+            packages = [
+              node
+              task
+            ];
+          };
+
           template = pkgs.mkShell {
             name = "template";
 
