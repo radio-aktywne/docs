@@ -38,6 +38,7 @@
         node = pkgs.nodejs;
         nil = pkgs.nil;
         task = pkgs.go-task;
+        coreutils = pkgs.coreutils;
         trunk = pkgs.trunk-io;
         copier = pkgs.copier;
       in {
@@ -66,6 +67,7 @@
               node
               nil
               task
+              coreutils
               trunk
               copier
             ];
@@ -81,6 +83,7 @@
             packages = [
               node
               task
+              coreutils
             ];
 
             shellHook = ''
@@ -94,6 +97,7 @@
             packages = [
               node
               task
+              coreutils
             ];
           };
 
@@ -102,6 +106,7 @@
 
             packages = [
               task
+              coreutils
               copier
             ];
           };
@@ -112,6 +117,7 @@
             packages = [
               node
               task
+              coreutils
               trunk
             ];
 

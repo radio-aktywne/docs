@@ -6,9 +6,8 @@ tasks:
     desc: Fetch template updates
     interactive: true
     env:
-      GIT_CONFIG_COUNT: 1
-      GIT_CONFIG_KEY_0: commit.gpgsign
-      GIT_CONFIG_VALUE_0: false
+      GIT_CONFIG_GLOBAL: ""
+      GIT_CONFIG_SYSTEM: ""
     cmds:
       - >
         copier
@@ -22,7 +21,8 @@ tasks:
       - >
         nix
         --accept-flake-config
-        --extra-experimental-features 'nix-command flakes'
+        --extra-experimental-features
+        'nix-command flakes'
         --no-warn-dirty
         flake
         update
@@ -44,19 +44,19 @@ tasks:
         check
         {{ .CLI_ARGS }}
   remove-node-modules:
-    desc: Remove node_modules
+    desc: Clean node_modules
     cmds:
       - >
         rm
         --recursive
         --force
-        ./node_modules/
+        node_modules
     status:
       - >
         test
         '!'
         -d
-        ./node_modules/
+        node_modules
   clean:
     desc: Clean build outputs
     cmds:
@@ -71,32 +71,25 @@ tasks:
         test
         '!'
         -d
-        ./build/
+        build
       - >
         test
         '!'
         -d
-        ./.docusaurus/
+        .docusaurus
       - >
         test
         '!'
         -d
-        ./node_modules/.cache/
-  purge:
-    desc: Clean everything
-    cmds:
-      - defer:
-          task: clean
-      - defer:
-          task: remove-node-modules
+        node_modules/.cache
   install:
     desc: Install dependencies
     sources:
-      - ./package-lock.json
       - ./package.json
+      - ./package-lock.json
       - ./flake.lock
       - ./*.nix
-      - ./Taskfile.dist.{yaml,yml}
+      - ./Taskfile.dist.yaml
       - ./{taskfile,Taskfile}.{yaml,yml}
     generates:
       - ./node_modules/**/*
@@ -117,22 +110,6 @@ tasks:
             --no-fund
             --quiet
             --no-progress
-  ci:
-    desc: Clean install dependencies
-    sources:
-      - ./package-lock.json
-      - ./package.json
-      - ./flake.lock
-      - ./*.nix
-      - ./Taskfile.dist.{yaml,yml}
-      - ./{taskfile,Taskfile}.{yaml,yml}
-    generates:
-      - ./node_modules/**/*
-    cmds:
-      - >
-        npm
-        ci
-        {{ .CLI_ARGS }}
   dev:
     desc: Run in development mode
     interactive: true
@@ -152,13 +129,13 @@ tasks:
       - ./static/**/*
       - ./babel.config.js
       - ./custom.css
-      - ./docusaurus.config.js
+      - ./docusaurus.config.ts
       - ./flake.lock
       - ./*.nix
       - ./package-lock.json
       - ./package.json
       - ./tsconfig.json
-      - ./Taskfile.dist.{yaml,yml}
+      - ./Taskfile.dist.yaml
       - ./{taskfile,Taskfile}.{yaml,yml}
     generates:
       - ./build/**/*
@@ -183,4 +160,3 @@ tasks:
         run
         update
         {{ .CLI_ARGS }}
-      - task: install-internal
