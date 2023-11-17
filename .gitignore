@@ -2,24 +2,23 @@
 /local.nix
 
 #Task
-/.task
+/.task/
 /Taskfile.yaml
 /Taskfile.yml
 
 # Dependencies
-/node_modules
+/node_modules/
 
-# Production
-/build
+# Build
+/build/
 
 # Generated files
-.docusaurus
-.cache-loader
+/.docusaurus/
 
 # Misc
 .DS_Store
-
+.todo
 npm-debug.log*
 
 # Test
-/.tmp
+/.tmp/

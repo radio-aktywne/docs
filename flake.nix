@@ -85,10 +85,6 @@
               task
               coreutils
             ];
-
-            shellHook = ''
-              task install
-            '';
           };
 
           build = pkgs.mkShell {
@@ -120,10 +116,6 @@
               coreutils
               trunk
             ];
-
-            shellHook = ''
-              task install
-            '';
           };
         };
       };
