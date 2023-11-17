@@ -25,7 +25,7 @@ const config: Config = {
       {
         docs: {
           // Use src directory for docs
-          path: "src",
+          path: "src/",
 
           // Use docs on root
           routeBasePath: "/",
@@ -36,7 +36,7 @@ const config: Config = {
         // Disable blog
         blog: false,
         theme: {
-          customCss: "./custom.css",
+          customCss: "custom.css",
         },
       } satisfies Preset.Options,
     ],

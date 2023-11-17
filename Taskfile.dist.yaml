@@ -1,4 +1,3 @@
----
 version: "3"
 
 tasks:
@@ -50,49 +49,24 @@ tasks:
         rm
         --recursive
         --force
-        node_modules
+        node_modules/
     status:
       - >
         test
         '!'
         -d
-        node_modules
-  clean:
-    desc: Clean build outputs
-    cmds:
-      - >
-        npm
-        run
-        clean
-        --
-        {{ .CLI_ARGS }}
-    status:
-      - >
-        test
-        '!'
-        -d
-        build
-      - >
-        test
-        '!'
-        -d
-        .docusaurus
-      - >
-        test
-        '!'
-        -d
-        node_modules/.cache
+        node_modules/
   install:
     desc: Install dependencies
     sources:
-      - ./package.json
-      - ./package-lock.json
-      - ./flake.lock
-      - ./*.nix
-      - ./Taskfile.dist.yaml
-      - ./{taskfile,Taskfile}.{yaml,yml}
+      - flake.lock
+      - "*.nix"
+      - package-lock.json
+      - package.json
+      - Taskfile.dist.yaml
+      - "{taskfile,Taskfile}.{yaml,yml}"
     generates:
-      - ./node_modules/**/*
+      - node_modules/**/*
     cmds:
       - >
         npm
@@ -110,35 +84,59 @@ tasks:
             --no-fund
             --quiet
             --no-progress
-  dev:
-    desc: Run in development mode
-    interactive: true
+  update:
+    desc: Update dependencies
     cmds:
       - task: install-internal
       - >
         npm
         run
-        dev
+        update
         --
         {{ .CLI_ARGS }}
+  clean:
+    desc: Clean build outputs
+    cmds:
+      - >
+        npm
+        run
+        clean
+        --
+        {{ .CLI_ARGS }}
+    status:
+      - >
+        test
+        '!'
+        -d
+        build/
+      - >
+        test
+        '!'
+        -d
+        .docusaurus/
+      - >
+        test
+        '!'
+        -d
+        node_modules/.cache/
   build-internal:
     desc: Build outputs
     internal: true
     sources:
-      - ./src/**/*
-      - ./static/**/*
-      - ./babel.config.js
-      - ./custom.css
-      - ./docusaurus.config.ts
-      - ./flake.lock
-      - ./*.nix
-      - ./package-lock.json
-      - ./package.json
-      - ./tsconfig.json
-      - ./Taskfile.dist.yaml
-      - ./{taskfile,Taskfile}.{yaml,yml}
+      - src/**/*
+      - static/**/*
+      - babel.config.mjs
+      - custom.css
+      - docusaurus.config.mts
+      - flake.lock
+      - "*.nix"
+      - package-lock.json
+      - package.json
+      - Taskfile.dist.yaml
+      - "{taskfile,Taskfile}.{yaml,yml}"
+      - tsconfig.json
     generates:
-      - ./build/**/*
+      - build/**/*
     cmds:
       - >
         npm
@@ -151,12 +149,14 @@ tasks:
     cmds:
       - task: install-internal
       - task: build-internal
-  update:
-    desc: Update dependencies
+  dev:
+    desc: Run in development mode
+    interactive: true
     cmds:
       - task: install-internal
       - >
         npm
         run
-        update
+        dev
+        --
         {{ .CLI_ARGS }}

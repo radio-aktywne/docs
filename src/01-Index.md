@@ -5,7 +5,8 @@ title: Index
 
 # radio-aktywne
 
-This is a place for general documentation.
+This repository contains general documentation for the
+[`radio-aktywne`](https://github.com/radio-aktywne) organization.
 
 And it will be completed later 😛
 
