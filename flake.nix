@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
     flake-parts = {
@@ -73,7 +73,7 @@
             ];
 
             shellHook = ''
-              task install
+              export TMPDIR=/tmp
             '';
           };
 
@@ -85,6 +85,10 @@
               task
               coreutils
             ];
+
+            shellHook = ''
+              export TMPDIR=/tmp
+            '';
           };
 
           build = pkgs.mkShell {
@@ -95,6 +99,10 @@
               task
               coreutils
             ];
+
+            shellHook = ''
+              export TMPDIR=/tmp
+            '';
           };
 
           template = pkgs.mkShell {
@@ -105,6 +113,10 @@
               coreutils
               copier
             ];
+
+            shellHook = ''
+              export TMPDIR=/tmp
+            '';
           };
 
           lint = pkgs.mkShell {
@@ -116,6 +128,10 @@
               coreutils
               trunk
             ];
+
+            shellHook = ''
+              export TMPDIR=/tmp
+            '';
           };
         };
       };
