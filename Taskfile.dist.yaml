@@ -91,8 +91,8 @@ tasks:
       - >
         npm
         run
-        update
         --
+        update
         {{ .CLI_ARGS }}
   clean:
     desc: Clean build outputs
@@ -100,8 +100,8 @@ tasks:
       - >
         npm
         run
-        clean
         --
+        clean
         {{ .CLI_ARGS }}
     status:
       - >
@@ -141,8 +141,8 @@ tasks:
       - >
         npm
         run
-        build
         --
+        build
         {{ .CLI_ARGS }}
   build:
     desc: Build outputs
@@ -157,6 +157,6 @@ tasks:
       - >
         npm
         run
-        dev
         --
+        dev
         {{ .CLI_ARGS }}
