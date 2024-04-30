@@ -19,6 +19,11 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: [
+    // Enable image zoom
+    "docusaurus-plugin-zooming",
+  ],
+
   presets: [
     [
       "classic",
@@ -61,6 +66,15 @@ const config: Config = {
     prism: {
       theme: themes.github,
       darkTheme: themes.dracula,
+    },
+    zooming: {
+      background: {
+        light: "rgb(250,250,250)",
+        dark: "rgb(27,27,29)",
+      },
+      options: {
+        scaleExtra: 2.0,
+      },
     },
   } satisfies Preset.ThemeConfig,
 };
