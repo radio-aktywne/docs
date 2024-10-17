@@ -50,3 +50,26 @@ Apps:
 Below you can find an architecture diagram for the system.
 
 ![Architecture diagram for broadcast system](/architecture/broadcast.svg)
+
+## Users
+
+Users system is responsible for managing users and authenticating them.
+
+Services:
+
+- [`falcon`](https://github.com/radio-aktywne/falcon)
+- [`scorpion`](https://github.com/radio-aktywne/scorpion)
+
+Databases:
+
+- [`diamond`](https://github.com/radio-aktywne/diamond)
+- [`obsidian`](https://github.com/radio-aktywne/obsidian)
+
+Apps:
+
+- [`crocus`](https://github.com/radio-aktywne/crocus)
+- [`orchid`](https://github.com/radio-aktywne/orchid)
+
+Below you can find an architecture diagram for the system.
+
+![Architecture diagram for users system](/architecture/users.svg)
