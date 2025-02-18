@@ -2,7 +2,7 @@
 
 <div align="center">
 
-documentation 📄
+Documentation 📄
 
 [![Lint](https://github.com/radio-aktywne/docs/actions/workflows/lint.yaml/badge.svg)](https://github.com/radio-aktywne/docs/actions/workflows/lint.yaml)
 [![Deploy](https://github.com/radio-aktywne/docs/actions/workflows/deploy.yaml/badge.svg)](https://github.com/radio-aktywne/docs/actions/workflows/deploy.yaml)
