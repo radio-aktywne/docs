@@ -41,7 +41,7 @@ Apps:
 
 - [`aster`](https://github.com/radio-aktywne/aster)
 - [`daisy`](https://github.com/radio-aktywne/daisy)
-- [`jasmine`](https://github.com/radio-aktywne/lavender)
+- [`jasmine`](https://github.com/radio-aktywne/jasmine)
 - [`lotus`](https://github.com/radio-aktywne/lotus)
 - [`magnolia`](https://github.com/radio-aktywne/magnolia)
 - [`poppy`](https://github.com/radio-aktywne/poppy)
