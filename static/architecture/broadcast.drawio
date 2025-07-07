@@ -157,7 +157,7 @@
         <mxCell id="6Z3Ub44W8wANlwYYrK5l-1" value="beaver&lt;br&gt;&lt;br&gt;Litestar + Prisma" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
           <mxGeometry x="-1920" y="858.6700000000001" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6Z3Ub44W8wANlwYYrK5l-2" value="sapphire&lt;br&gt;&lt;br&gt;CockroachDB" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#d0cee2;strokeColor=#56517e;" parent="1" vertex="1">
+        <mxCell id="6Z3Ub44W8wANlwYYrK5l-2" value="sapphire&lt;br&gt;&lt;br&gt;PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#d0cee2;strokeColor=#56517e;" parent="1" vertex="1">
           <mxGeometry x="-1720" y="680.0000000000001" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9XDnjn4z7Z36OQ7EGYea-29" value="web browser&lt;br style=&quot;font-size: 8px&quot;&gt;&lt;br style=&quot;font-size: 8px&quot;&gt;Chrome, Firefox, etc." style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;shadow=0;glass=0;sketch=0;perimeterSpacing=0;strokeWidth=1;dashed=1;fillColor=#bac8d3;strokeColor=none;" parent="1" vertex="1">
@@ -191,7 +191,7 @@
         <mxCell id="gijSiJ1kWZIcr5wRInpQ-1" value="pelican&lt;br&gt;&lt;br&gt;Litestar + mc" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
           <mxGeometry x="-1200" y="1380" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gijSiJ1kWZIcr5wRInpQ-2" value="&lt;div&gt;graphite&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CockroachDB&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#d0cee2;strokeColor=#56517e;" parent="1" vertex="1">
+        <mxCell id="gijSiJ1kWZIcr5wRInpQ-2" value="&lt;div&gt;graphite&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PostgreSQL&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fontFamily=sans-serif;dashed=1;fillColor=#d0cee2;strokeColor=#56517e;" parent="1" vertex="1">
           <mxGeometry x="-1000" y="1380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="gijSiJ1kWZIcr5wRInpQ-11" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=sans-serif;fontSize=8;curved=0;" parent="1" source="gijSiJ1kWZIcr5wRInpQ-10" target="6Z3Ub44W8wANlwYYrK5l-1" edge="1">
