@@ -9,14 +9,6 @@ export default {
   baseUrl: url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`,
   favicon: "favicon.svg?v=1",
 
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-  },
-
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-
   plugins: [
     // Enable image zoom
     "docusaurus-plugin-zooming",
@@ -48,6 +40,11 @@ export default {
   ],
 
   themeConfig: {
+    colorMode: {
+      // Use system color scheme by default
+      respectPrefersColorScheme: true,
+    },
+
     navbar: {
       items: [
         {

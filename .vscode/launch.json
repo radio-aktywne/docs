@@ -1,12 +1,18 @@
 {
-  "version": "0.2.0",
   "configurations": [
     {
-      "name": "run",
-      "type": "node",
+      "name": "docs",
       "request": "launch",
-      "runtimeExecutable": "task",
-      "runtimeArgs": ["dev"]
+      "runtimeArgs": ["exec", "docusaurus", "--", "start", "--host", "0.0.0.0"],
+      "runtimeExecutable": "npm",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "killOnServerStop": true,
+        "pattern": "compiled successfully",
+        "uriFormat": "http://localhost:3000/docs/"
+      },
+      "type": "node"
     }
-  ]
+  ],
+  "version": "0.2.0"
 }
