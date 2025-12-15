@@ -6,10 +6,10 @@ title: Architecture
 # Architecture
 
 `radio-aktywne` relies on a few different systems to operate.
-Each of these systems consists of multiple services
+Each of these systems consists of multiple deployables
 that work together to provide the desired functionality.
 
-The idea for each service is to do one thing and do it well.
+The idea for each deployable is to do one thing and do it well.
 
 ## Broadcast
 

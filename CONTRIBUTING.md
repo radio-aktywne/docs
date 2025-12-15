@@ -129,11 +129,11 @@ task update
 
 ## 🚀 Deployment
 
-You can find the deployed project
+You can find the deployed site
 [here](https://radio-aktywne.github.io/docs).
 
 Every time you push to the `main` branch,
-a GitHub Actions workflow will automatically build and deploy the app
+a GitHub Actions workflow will automatically build and deploy the site
 to GitHub Pages.
 You can find the GitHub Actions workflow that does this in
 [`.github/workflows/deploy.yaml`](https://github.com/radio-aktywne/docs/blob/main/.github/workflows/deploy.yaml).

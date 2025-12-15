@@ -6,19 +6,21 @@
 /Taskfile.yaml
 /Taskfile.yml
 
+# Misc
+.DS_Store
+.todo
+
 # Dependencies
 /node_modules/
 
 # Build
 /build/
 
-# Generated files
+# Debug
+*.log
+
+# Typescript
+*.tsbuildinfo
+
+# Docusaurus
 /.docusaurus/
-
-# Misc
-.DS_Store
-.todo
-npm-debug.log*
-
-# Test
-/.tmp/

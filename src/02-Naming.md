@@ -8,11 +8,12 @@ title: Naming
 `radio-aktywne` uses multiple naming conventions
 to keep the projects organized and consistent.
 
-## Services
+## Deployables
 
-The idea is to use fun names for services.
+The idea is to use fun names for deployables
+(apps, databases, services).
 It's a controversial one, but it has its purpose.
-Services evolve over time, so if you choose a descriptive name,
+Deployables evolve over time, so if you choose a descriptive name,
 it might not be accurate in the future.
 And changing names in a distributed system is a pain.
 So just choose some convention with fun names,
@@ -26,7 +27,7 @@ Here are some general guidelines for good names:
 - Stick to one word names.
 - Avoid uncommon letters, phonemes or combinations.
 
-The conventions that we use for different types of services are:
+The conventions that we use for different types of deployables are:
 
 - [Names of animals](https://namingschemes.com/Animals) for services.
 - [Names of minerals](https://namingschemes.com/Minerals) for databases.
@@ -57,8 +58,8 @@ Devcontainers should be named according to the same convention as templates.
 
 ## Repositories
 
-Repositories for services and packages
-should be named the same as the service or package.
+Repositories for deployables and packages
+should be named the same as the deployable or package.
 
 Repositories for templates should prefix
 the template name with `template-`.

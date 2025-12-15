@@ -13,12 +13,12 @@ Documentation 📄
 
 ## 💡 About
 
-This repository contains general documentation for the
+`docs` contains general documentation for the
 [`radio-aktywne`](https://github.com/radio-aktywne) organization.
 
 ## 🚀 Deployment
 
-You can find the deployed project
+You can find the deployed site
 [here](https://radio-aktywne.github.io/docs).
 
 ## 💻 Development
