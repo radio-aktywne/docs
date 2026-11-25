@@ -73,3 +73,11 @@ Apps:
 Below you can find an architecture diagram for the system.
 
 ![Architecture diagram for users system](/architecture/users.svg)
+
+## General
+
+General deployables are not part of any particular system.
+
+Apps:
+
+- [`sunflower`](https://github.com/radio-aktywne/sunflower)
